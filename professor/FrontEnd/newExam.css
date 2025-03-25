@@ -1,0 +1,721 @@
+.newExamContainer {
+    display: flex;
+    background-color: #f1f1f3;
+    flex-direction: column;
+}
+
+.exam-title {
+    flex: 2;
+    margin-left:20%;
+    padding: 20px;
+    background-color: #f1f1f3;
+    /* border-right: 1px solid #ccc; */
+}
+
+.create-exam-container form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: calc(100% - 63px);
+}
+.exam-table table tbody tr td span{
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    width: 90px;
+    justify-content: center;
+}
+
+.create-exam-container select {
+    width: 90%;
+    margin-top:10px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.exam-title button {
+    background-color: #e96d7f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.exam-title button:hover {
+    background-color: #eb7c8c;
+}
+
+/* Question popup form */
+
+#add-question-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px;
+    display: none;
+    width: 70%;
+    max-width: 700px;
+}
+
+.close-btn {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+#add-question-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-row{
+    display: flex;
+    margin-bottom:20px;
+}
+
+.form-row input[type="number"] {
+    width: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-row label {
+    margin: 5px;
+}
+
+.save-button {
+    display: flex;
+    justify-content: end;
+}
+
+#add-question-form button {
+    padding: 10px 35px;
+    background-color: #e96d7f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#add-question-form button:hover {
+    background-color: #eb7c8c;
+}
+
+#add-question-form #question {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+.completeExamContainer {
+    position: absolute;
+    top: 90%;
+    right:20px;
+    border-radius:5px;
+}
+.completeExamContainer form button{
+    background: #8be98c;
+    color: #467546;
+    border:none;
+    border-radius:5px;
+    padding:10px 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.completeExamContainer form button:hover{
+    background:#97eb98;
+}   
+
+/* update question */
+
+.update-question-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px;
+    display: none;
+    width: 70%;
+    max-width: 700px;
+}
+
+.update-question-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+.update-question-form button {
+    padding: 10px 35px;
+    background-color: #e96d7f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.update-question-form button:hover {
+    background-color: #eb7c8c;
+}
+
+.update-question-form #update-question-title {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+
+/* Create Exam */
+
+.create-exam-container form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: calc(100% - 63px);
+}
+
+.create-exam-container select {
+    width: 90%;
+    margin-top:10px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+.main-content{
+    position: fixed;
+    height:calc(100% - 63.6px);
+    width: calc(100%);
+    overflow: auto;
+}
+
+.create-exam-container {
+    position: fixed;
+    height: 100%;
+    width:20%;
+    padding: 20px;
+    background-color:white;
+    z-index: 100;
+    border-right: 1px solid lightgray;
+}
+
+.create-exam-container label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top:20px;
+}
+
+.create-exam-container input {
+    width: 90%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    outline: none;
+}
+#betweenDatesForm{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin:0 8rem;
+    margin-left:20%;
+    padding: 20px;
+}
+
+#betweenDatesForm div input {
+    width: 90%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.create-exam-container button {
+    background-color: #e96d7f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.create-exam-container button:hover {
+    background-color: #eb7c8c;
+}
+
+.create-exam-container input[type="text"] {
+    width: 90%;
+    font-size: 28px;
+    border:none;
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+/* Exam Table */
+
+.exam-table table{
+    border-collapse:separate;
+    border-spacing: 0 10px;
+}
+.exam-table table tbody tr{
+    background:white;
+}
+.exam-table table tbody tr td{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+}
+.exam-table table tbody tr td:first-child{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 5px 0 0 5px;
+}
+th{
+    font-weight: 550;
+    color: gray;
+}
+td{
+    font-weight: 550;
+    vertical-align: middle;
+}
+.exam-table table tbody tr td:last-child{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 0 5px 5px 0;
+}
+.exam-table table thead tr{
+    border-style: none;
+    border-color: #f1f1f3;
+}
+
+.exam-table {
+    display: block;
+    margin: 0;
+    margin-left:20%;
+    padding: 20px;
+    padding-top:0px;
+}
+
+.exam-table table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+}
+
+/* Question Table */
+
+.question-table {
+    margin: 20px 0;
+    display: block;
+}
+
+.question-table table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+}
+
+.question-table table tbody tr {
+    background: white;
+}
+
+.question-table table tbody tr td {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.question-table table tbody tr td:first-child {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 5px 0 0 5px;
+}
+
+th {
+    font-weight: 550;
+    color: gray;
+    padding: 8px;
+}
+
+td {
+    font-weight: 550;
+    padding: 8px;
+}
+
+.question-table table tbody tr td:last-child {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 0 5px 5px 0;
+}
+
+.question-table table thead tr {
+    border-style: none;
+    border-color: #f1f1f3;
+}
+
+
+
+.answer-table {
+    margin: 20px 0;
+    display: block;
+}
+
+.answer-table table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+}
+
+.answer-table table tbody tr {
+    background: white;
+}
+
+.answer-table table tbody tr td {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.answer-table table tbody tr td:first-child {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 5px 0 0 5px;
+}
+
+th {
+    font-weight: 550;
+    color: gray;
+    padding: 8px;
+}
+
+td {
+    font-weight: 550;
+    padding: 8px;
+}
+
+.answer-table table tbody tr td:last-child {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 0 5px 5px 0;
+}
+
+.answer-table table thead tr {
+    border-style: none;
+    border-color: #f1f1f3;
+}
+.answer-table table tbody tr td span{
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    width: 90px;
+    justify-content: center;
+}
+
+
+
+/* Update exam popup */
+
+.update-exam-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px;
+    display: none;
+    width: 70%;
+    max-width: 700px;
+}
+.close-button {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+.update-exam-form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    outline: none;
+    margin-bottom: 20px;
+}
+.update-exam-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+td button#updateExam{
+    text-decoration: none;
+    color:#111965;
+    border:1px solid lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background:none;
+}
+
+.update-exam-form div button {
+    padding: 10px 35px;
+    background-color: #e96d7f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius:5px;
+}
+
+.update-exam-form div button:hover {
+    background-color: #eb7c8c;
+}
+
+#exam-table-body button{
+    color: #111965;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+.exam-table table tbody tr.checked-exam-row{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius:5px;
+}
+
+
+.question-table table tbody tr td .questionTableActions{
+    color: #111965;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background:none;
+}
+.answer-table table tbody tr td .answerTableActions{
+    color: #111965;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background:none;
+}
+
+
+#add-answer-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px;
+    display: none;
+    width: 70%;
+    max-width: 700px;
+}
+
+.close-answer-form-btn {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+#add-answer-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-row{
+    display: flex;
+    margin-bottom:20px;
+}
+
+.form-row input[type="number"] {
+    width: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-row label {
+    margin: 5px;
+}
+
+.save-button {
+    display: flex;
+    justify-content: end;
+}
+
+#add-answer-form button {
+    padding: 10px 35px;
+    background-color: #e96d7f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#add-answer-form button:hover {
+    background-color: #eb7c8c;
+}
+
+#add-answer-form #answer {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+#edit-answer-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px;
+    display: none;
+    width: 70%;
+    max-width: 700px;
+}
+
+#edit-answer-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+#edit-answer-form button {
+    padding: 10px 35px;
+    background-color: #e96d7f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#edit-answer-form button:hover {
+    background-color: #eb7c8c;
+}
+
+#edit-answer-form #editAnswer {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+.question-table table tbody tr td .delete{
+    text-decoration: none;
+    color:#e96d7f;
+    border:1px solid lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background:none;
+}
+.exam-table table #exam-table-body tr td .delete{
+    text-decoration: none;
+    color:#e96d7f;
+    border:1px solid lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background:none;
+}  
+.answer-table table tbody tr td .delete{
+    text-decoration: none;
+    color:#e96d7f;
+    border:1px solid lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background:none;
+}   
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .exam-title,
+    .exam-settings {
+        width: 100%;
+    }
+}

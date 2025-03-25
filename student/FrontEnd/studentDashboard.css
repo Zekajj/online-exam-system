@@ -1,0 +1,536 @@
+.overview{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    padding:0;
+    margin: 4rem 8rem;
+    border-radius: 24px;
+    flex-wrap: wrap;
+}
+.overview a{
+    text-decoration: none;
+    color: black;
+    border-radius:5px;
+    width:350px;
+    padding: 2rem;
+    background:white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+@media (max-width: 1400px){
+    .overview{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        padding:0;
+        margin: 4rem 8rem;
+        border-radius: 24px;
+        flex-wrap: wrap;
+    }
+    .overview a{
+        text-decoration: none;
+        color: black;
+        border-radius:5px;
+        width:350px;
+        padding: 2rem;
+        background:white;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+}
+
+/*.overview a:nth-child(1){
+    background:#93ccad;
+}
+.overview a:nth-child(2){
+    background:#bab0ea;
+}
+.overview a:nth-child(3){
+    background:#f7b28f;
+}
+
+.overview a:nth-child(4){
+    background:#9cadd2;
+}
+.overview a:nth-child(5){
+   background: #e96d7f;
+}
+.overview a:nth-child(6){
+    background: #ebb100;
+ }*/
+
+
+.overview a div{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    gap: 5px;
+    align-items: center;
+}
+.overview a div div{
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+}
+.overview a div i{
+    font-size: 4rem;
+}
+.overview a div div span{
+    font-size:14px;
+    color:gray;
+}
+.overview a div div h5{
+    font-size:25px;
+    margin: 0;
+}
+
+
+/*Dashboard recent exam results */
+
+.recentExam{
+    margin:1rem 8rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.recentExam h3{
+    border-bottom: 2px solid gray;
+    
+}
+.recentExam .recentExamContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.recentExam .recentExamContent .statsContainer{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+.recentExam .recentExamContent .statsContainer{
+    border-right: 2px solid gray;
+}
+.recentExam .recentExamContent .statsContainer .content{
+    display: flex;
+    flex-direction: column;
+}
+.recentExam .recentExamContent .statsContainer:last-child{
+    border-right: none;
+}
+
+
+/*Page title section*/
+
+.pageTitleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.5rem 8rem;
+    align-items: center;
+}
+.pageTitleContainer div a{
+    text-decoration: none;
+    color:white;
+    background:#e96d7f;
+    padding:10px;
+    border-radius:5px;
+
+}
+
+.pageTitleContainer div h2{
+   margin:0;
+
+}
+
+
+/*Dashboard student table with active and offline students*/
+
+.studentTable{
+    margin:0 8rem;
+}
+
+.studentTable table{
+    border-collapse:separate;
+    border-spacing: 0 10px;
+}
+.studentTable table tbody tr{
+    background:white;
+}
+.studentTable table tbody tr td{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+}
+.studentTable table tbody tr td:first-child{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 5px 0 0 5px;
+}
+th{
+    font-weight: 550;
+    color: gray;
+}
+td{
+    font-weight: 550;
+    vertical-align: middle;
+}
+.studentTable table tbody tr td:last-child{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 0 5px 5px 0;
+}
+.studentTable table thead tr{
+    border-style: none;
+    border-color: #f1f1f3;
+}
+.studentTable table tbody tr td span{
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    width: 90px;
+    justify-content: center;
+}
+
+td a.edit{
+    text-decoration: none;
+    color:#111965;
+    border:1px solid lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+td a.delete{
+    text-decoration: none;
+    color:#e96d7f;
+    border:1px solid lightgray;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+/*Filters for the students table*/
+
+.filters{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.filters div input{
+    padding: 5px;
+    width: 300px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.filters div input::placeholder{
+    color: lightgray;
+}
+
+.filters div select{
+    padding: 5px;
+    width: 130px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.filters div select::placeholder{
+    color: lightgray;
+}
+
+.filters div button{
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #111965;
+    color: white;
+}
+
+
+@media (max-width: 768px){
+    
+    .pageTitleContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1.5rem 1rem;
+        align-items: center;
+    }
+    .overview{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        padding:0;
+        margin: 4rem 1rem;
+        border-radius: 24px;
+        flex-wrap: wrap;
+    }
+    .overview a{
+        text-decoration: none;
+        color: black;
+        border-radius:5px;
+        width:350px;
+        padding: 2rem;
+        background:white;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+}
+
+.studentExam {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 8rem;
+    justify-content: space-between;
+}
+
+.studentExam .startExamContainer {
+    width: 30%;
+    margin: 0rem 0 2.7rem 0;   
+}
+.studentExam .startExamContainer .startExam{
+    border-radius: 5px;
+    background:white;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    position:relative;
+    box-shadow:  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: 35rem;
+}
+
+.studentExam .startExamContainer .studentExamJoin{
+    display:flex;
+    justify-content:space-between;
+    width: 100%;
+    padding: 0 2rem;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.studentExam .startExamContainer .studentExamJoin button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 45%;
+}
+.studentExam .startExamContainer .studentExamJoin form{
+    width: 45%;
+}
+
+.studentExam .startExamContainer .studentExamJoin form button{
+   background: #111965;
+   opacity: 1;
+   color: white;
+   cursor:pointer;
+   width: 100%;
+   text-align: center;
+   text-decoration: none;
+}
+.studentExam .startExamContainer .studentExamJoin form button:hover{
+    background: #293074;
+    color: white;
+ }
+.studentExam .startExamContainer .studentExamSettings div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    margin: 10px 0;
+    padding: 0 2rem;
+}
+.studentExam .startExamContainer .studentExamSettings div i{
+    font-size:30px;
+    margin-right: 15px;
+}
+.studentExam .startExamContainer .studentExamSettings div div{
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+}
+.studentExam .startExamContainer .studentExamSettings div:first-child div span:nth-child(2){
+    font-weight: 600;
+}
+
+.studentExam .studentExamResultsContainer .chartHeading {
+    color: #023047;
+    font-size: 24px;
+    text-align: center;
+  }
+
+.studentExam .studentExamResultsContainer .studentStats .chartContainer {
+    width:400px;
+    align-items: center;
+    justify-self: center;
+    background:white;
+    padding: 1rem;
+    box-shadow:  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    color: #023047;
+    transition: all 400ms ease;
+    margin: 1rem 0;
+   
+  } 
+  .studentExam .studentExamResultsContainer .studentStats .details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .studentExam .studentExamResultsContainer .studentStats .details ul li {
+    font-size: 13px;
+    margin: 12px 0;
+    text-transform: uppercase;
+
+  }
+  
+  .studentExam .studentExamResultsContainer .studentStats .details .percentage {
+    font-weight: 700;
+    color: #e63946;
+  }
+
+.studentExam .studentTable {
+    margin: auto;
+    position: relative;
+  }
+.studentExam .studentTable table{
+    border-collapse:separate;
+    border-spacing: 0 10px;
+}
+.studentExam .studentTable table tbody tr{
+    background:white;
+}
+.studentExam .studentTable table tbody tr td{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+}
+.studentExam .studentTable table tbody tr td:first-child{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 5px 0 0 5px;
+}
+th{
+    font-weight: 550;
+    color: gray;
+    
+}
+td{
+    font-weight: 550;
+    vertical-align: middle;
+}
+.studentExam .studentTable table tbody tr td:last-child{
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 0 5px 5px 0;
+}
+.studentExam .studentTable table thead tr{
+    border-style: none;
+    border-color: #f1f1f3;
+}
+.studentExam .studentTable table tbody tr td span{
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    width: 90px;
+    justify-content: center;
+}
+
+.studentExam .studentExamResultsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:2.5rem;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview  .CompletedExams{
+    background:white;
+    box-shadow:  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    margin:1rem 0;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview  .CompletedExams .progressContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 0 1rem;
+    margin:1.5rem 0;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview  .CompletedExams .progressContainer div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.veryGood::-webkit-progress-value{
+    background:#f5e342 !important;
+    border-radius: 50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.veryGood::-webkit-progress-bar {
+    background-color: white; width: 100%;border-radius:50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.veryGood{
+    width: 100%;
+    background-color: white;
+    border:1px solid lightgray;
+    border-radius:50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.bad::-webkit-progress-value{
+    background:#e96d7f !important;
+    border-radius: 50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.bad::-webkit-progress-bar {
+    background-color: white; width: 100%;border-radius:50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.bad{
+    width: 100%;
+    background-color: white;
+    border:1px solid lightgray;
+    border-radius:50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.excellent::-webkit-progress-value{
+    background:#93ccad !important;
+    border-radius: 50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.excellent::-webkit-progress-bar {
+    background-color: white; width: 100%;border-radius:50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.excellent{
+    width: 100%;
+    background-color: white;
+    border:1px solid lightgray;
+    border-radius:50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.good::-webkit-progress-value{
+    background:#34a1eb !important;
+    border-radius: 50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.good::-webkit-progress-bar {
+    background-color: white; width: 100%;border-radius:50px;
+}
+.studentExam .studentExamResultsContainer .statisticsOverview .CompletedExams .progressContainer progress.good{
+    width: 100%;
+    background-color: white;
+    border:1px solid lightgray;
+    border-radius:50px;
+}
+
+  
+

@@ -1,0 +1,176 @@
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.examContainer .questionContainer .questionPoints{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+.examContainer{
+    background:white;
+    padding: 1rem;
+    margin:2rem 0;
+    box-shadow:  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+}
+
+.examContainer .questionContainer .questionPoints span{
+    font-size: 13px;
+    color:gray;
+}
+
+.examContainer .questionContainer .questionTitle{
+    margin:0.5rem 0;  
+}
+
+.examContainer .answerContainer .answer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius:5px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.examContainer .answerContainer .answer .col-12{
+    flex:auto;
+}
+.examContainer .answerContainer .answer div.col-12{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    border:1px solid gray;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.examContainer .answerContainer .answer div.col-12 p{
+    margin: 0;
+}
+.examContainer .answerContainer .answer div.col-12 span{
+    border-right:1px solid gray;
+    padding:5px;
+    display: flex;
+    align-items: center;
+}
+.examContainer .answerContainer .answer input{
+    border:1px solid black;
+}
+
+.submitExamContainer{
+    display: flex;
+    justify-content: end;
+}
+#examForm .submitExamContainer button{
+    padding: 10px 20px;
+    border:none;
+    background-color: #e96d7f;
+    border-radius:5px;
+    color:white;
+}
+
+
+textarea {
+  width: 100%;
+  border:none;
+  outline:none;
+  background:none;
+}
+
+.mainContainer .examStatusContainer{
+    margin: 2rem 0;
+    background:#111965;
+    color:white;
+    position:fixed;
+    right:2rem;
+    box-shadow:  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    height: 80%;
+    padding: 1rem;
+
+}
+
+
+.base-timer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: lightgray;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  #timer{
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0 3rem 0;
+  }
+
+  div .examSpecifications{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid lightgray;
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  div .examSpecifications div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  div .examSpecifications:nth-child(3){
+    border:none;
+  }
+
+  div .examSpecifications i{
+    font-size:30px;
+  }

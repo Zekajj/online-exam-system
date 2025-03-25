@@ -1,0 +1,191 @@
+.Allstudents {
+  margin: 0 8rem;
+}
+
+.Allstudents table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+.Allstudents table tbody tr {
+  background: white;
+  vertical-align: middle;
+}
+.Allstudents table tbody tr td {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.Allstudents table tbody tr td:first-child {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-radius: 5px 0 0 5px;
+}
+th {
+  font-weight: 550;
+  color: gray;
+}
+td {
+  font-weight: 550;
+}
+.Allstudents table tbody tr td:last-child {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-radius: 0 5px 5px 0;
+}
+.Allstudents table thead tr {
+  border-style: none;
+  border-color: #f1f1f3;
+}
+.Allstudents table tbody tr td span {
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    width: 90px;
+    justify-content: center;
+}
+.filters {
+  margin: 0 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.filters div input {
+  padding: 5px;
+  width: 300px;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.filters div input::placeholder {
+  color: lightgray;
+}
+
+.filters div select {
+  padding: 5px;
+  width: 200px;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.filters div select::placeholder {
+  color: lightgray;
+}
+
+.filters div button {
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #111965;
+  color: white;
+}
+.pageTitleContainer {
+  margin: 1.5rem 8rem;
+}
+
+.OnlineStudents {
+  margin: 0 8rem;
+}
+
+.OnlineStudents table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+.OnlineStudents table tbody tr {
+  background: white;
+}
+.OnlineStudents table tbody tr td {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.OnlineStudents table tbody tr td:first-child {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-radius: 5px 0 0 5px;
+}
+.OnlineStudents table tbody tr td:last-child {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-radius: 0 5px 5px 0;
+}
+.OnlineStudents table thead tr {
+  border-style: none;
+  border-color: #f1f1f3;
+}
+.OnlineStudents table tbody tr td span {
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+.OfflineStudents {
+  margin: 0 8rem;
+}
+
+.OfflineStudents table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+.OfflineStudents table tbody tr {
+  background: white;
+}
+.OfflineStudents table tbody tr td {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.OfflineStudents table tbody tr td:first-child {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-radius: 5px 0 0 5px;
+}
+.OfflineStudents table tbody tr td:last-child {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-radius: 0 5px 5px 0;
+}
+.OfflineStudents table thead tr {
+  border-style: none;
+  border-color: #f1f1f3;
+}
+.OfflineStudents table tbody tr td span {
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+.NewStudents {
+  margin: 0 8rem;
+}
+
+.NewStudents table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+.NewStudents table tbody tr {
+  background: white;
+}
+.NewStudents table tbody tr td {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.NewStudents table tbody tr td:first-child {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-radius: 5px 0 0 5px;
+}
+.NewStudents table tbody tr td:last-child {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-radius: 0 5px 5px 0;
+}
+.NewStudents table thead tr {
+  border-style: none;
+  border-color: #f1f1f3;
+}
+.NewStudents table tbody tr td span {
+  padding: 5px 15px;
+  border-radius: 20px;
+}

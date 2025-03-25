@@ -1,0 +1,189 @@
+.title-examSelect-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-examSelect-container h2{
+    width:min-content;
+}
+
+
+.select-exam-container{
+    background:#f5f5f5;
+    padding:15px 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+
+.title-examSelect-container select{
+    padding: 5px;
+    width: 250px;
+    border-radius: 5px; 
+    border: 1px solid lightgray;
+    outline: none;
+}
+.examScore {
+    background:white;;
+    border:1px solid lightgray;
+    padding:15px;
+    margin: auto 0;
+    border-radius: 5px;
+    width: 25rem;
+  }
+
+.examScore .box {
+    width: 100%;
+}
+  
+  .examScore .box .chart {
+    position: relative;
+    width: 250px;
+    margin: 15px 60px;
+    height: 100%;
+    text-align: center;
+    font-size: 40px;
+    line-height: 250px; /* Change this to match the height of the canvas */
+    color: black;
+    display: flex; /* Add this to enable centering of content */
+    justify-content: center; /* Add this to horizontally center the content */
+    align-items: center; /* Add this to vertically center the content */
+  }
+  
+
+.examScore .box .chart canvas {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.answerKeyContainer.row{
+    background:white;
+    margin: 0;
+    margin-top: 1rem;
+    border:1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.answerKeyContainer .questionContainer div:first-child span{
+    font-size: 14px;
+}
+.answerKeyContainer .questionContainer div:last-child p{
+    font-size:18px;
+    font-weight: 600;
+}
+
+.answerKeyContainer .answersContainer div {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 5px; 
+    background: white;
+    padding: 5px;
+    border:1px solid lightgray;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+    max-height: 200px;
+    color: black;
+}
+.answerKeyContainer .answersContainer div span{
+    padding: 5px 8px 5px 0;
+    border-right: 2px solid gray;
+    align-items: center;
+    display: flex;
+    width: 30px;
+    margin: 10px 15px;
+    height: auto;
+}
+
+.answerKeyContainer .answersContainer div p{
+    margin:0;
+}
+
+.answerKeyContainer .answersContainer div.correct {
+    color: #2ed15a; 
+    border:1px solid #2ed15a;
+    background: #d5f6de;
+}
+.answerKeyContainer .answersContainer div.correct span {
+    border-color: #2ed15a;
+}
+
+.answerKeyContainer .answersContainer div.incorrect {
+    color: #e96d7f; 
+    border:1px solid #e96d7f;
+    background: #fbe2e5;
+}
+.answerKeyContainer .answersContainer div.incorrect span {
+    border-color: #e96d7f;
+}
+
+.resultsOverview{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:2rem;
+    justify-content: space-between;
+}
+.resultsOverview .resultsStatistics {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding:0;
+    border-radius: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultsOverview .resultsStatistics .statistics{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border-radius:5px;
+    width:400px;
+    height: 155px;
+    padding: 2rem;
+    background:white;
+    border: 1px solid lightgray;
+}
+.resultsStatistics .statistics div{
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+}
+.resultsStatistics .statistics i{
+    font-size: 4rem;
+}
+.resultsStatistics .statistics div span{
+    font-size:14px;
+    color:gray;
+}
+.resultsStatistics .statistics div h5{
+    font-size:25px;
+    margin: 0;
+}
+
+.passed{
+    color: #2ed15a;
+}
+.failed{
+    color: #e96d7f;
+}
+  
+  
