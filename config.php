@@ -1,15 +1,17 @@
 <?php
-$servername = "127.0.0.1";  // Use only the IP, without port
-$port = "3307";             // Define the port separately
-$username = "root";
-$password = "";
+$host = "dpg-cvhs6ndrie7s73ea3ls0-a"
+$port = "5432";                // Default PostgreSQL port
 $dbname = "onlineexam";
+$user = "onlineexam_user";
+$password = "";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Create connection using PDO
+try {
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;";
+    $conn = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    echo "Connected to PostgreSQL successfully!";
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
 ?>
+
