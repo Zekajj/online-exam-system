@@ -1,118 +1,109 @@
-    create database onlineexam;
-    use onlineexam;
+CREATE DATABASE onlineexam;
+\c onlineexam; -- Connect to the database
 
-    create table subject(
-        Id int auto_increment,
-        Name varchar(100),
-        Created_at datetime,
-        primary key(Id)
-    );
-    create table users(
-        Id int auto_increment,
-        FirstName varchar(50),
-        LastName varchar(50),
-        UserType char(1),
-        Email varchar(150),
-        Username varchar(100),
-        Password varchar(100),
-        VerificationCode int,
-        VerificationStatus char(1),
-        Status char(1),
-        Created_at datetime,
-        primary key(Id)
-    );
+-- Subject Table
+CREATE TABLE subject (
+    Id SERIAL PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
+-- Users Table
+CREATE TABLE users (
+    Id SERIAL PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    UserType CHAR(1) NOT NULL,
+    Email VARCHAR(150) UNIQUE NOT NULL,
+    Username VARCHAR(100) UNIQUE NOT NULL,
+    Password VARCHAR(100) NOT NULL,
+    VerificationCode INT,
+    VerificationStatus CHAR(1),
+    Status CHAR(1),
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-    create table exam(
-        Id int auto_increment,
-        Subject int,
-        Professor int,
-        Title varchar(150),
-        StartDate datetime,
-        Duration int,
-        Status char(1),
-        Created_at datetime,
-        primary key(Id),
-        foreign key (Subject) references subject(Id),
-        foreign key (Professor) references users(Id)
-    );
+-- Exam Table
+CREATE TABLE exam (
+    Id SERIAL PRIMARY KEY,
+    Subject INT REFERENCES subject(Id) ON DELETE CASCADE,
+    Professor INT REFERENCES users(Id) ON DELETE CASCADE,
+    Title VARCHAR(150) NOT NULL,
+    StartDate TIMESTAMP NOT NULL,
+    Duration INT NOT NULL,
+    Status CHAR(1),
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-    create table questions(
-        Id int auto_increment,
-        ExamId int,
-        Subject int,
-        Professor int,
-        Title varchar(20000),
-        Points int,
-        Created_at datetime,
-        primary key(Id),
-        foreign key (ExamId) references exam(Id),
-        foreign key (Subject) references subject(Id),
-        foreign key (Professor) references users(Id)
-    );
+-- Questions Table
+CREATE TABLE questions (
+    Id SERIAL PRIMARY KEY,
+    ExamId INT REFERENCES exam(Id) ON DELETE CASCADE,
+    Subject INT REFERENCES subject(Id) ON DELETE CASCADE,
+    Professor INT REFERENCES users(Id) ON DELETE CASCADE,
+    Title TEXT NOT NULL,
+    Points INT NOT NULL,
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-    create table answers(
-        Id int auto_increment,
-        QuestionId int,
-        Professor int,
-        Title varchar(20000),
-        Status char(1),
-        Created_at datetime,
-        primary key(Id),
-        foreign key(QuestionId) references questions(Id),
-        foreign key (Professor) references users(Id)
-    );
+-- Answers Table
+CREATE TABLE answers (
+    Id SERIAL PRIMARY KEY,
+    QuestionId INT REFERENCES questions(Id) ON DELETE CASCADE,
+    Professor INT REFERENCES users(Id) ON DELETE CASCADE,
+    Title TEXT NOT NULL,
+    Status CHAR(1),
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-    create table studentexam(
-        Id int auto_increment,
-        ExamId int,
-        Subject int,
-        Professor int,
-        Student int,
-        Title varchar(20000),
-        StartTime datetime,
-        EndTime datetime,
-        Status char(1),
-        ExamStartDate datetime,
-        Created_at datetime,
-        primary key(Id),
-        foreign key (Student) references users(Id)
-    );
+-- Student Exam Table
+CREATE TABLE studentexam (
+    Id SERIAL PRIMARY KEY,
+    ExamId INT REFERENCES exam(Id) ON DELETE CASCADE,
+    Subject INT REFERENCES subject(Id) ON DELETE CASCADE,
+    Professor INT REFERENCES users(Id) ON DELETE CASCADE,
+    Student INT REFERENCES users(Id) ON DELETE CASCADE,
+    Title TEXT NOT NULL,
+    StartTime TIMESTAMP NOT NULL,
+    EndTime TIMESTAMP NOT NULL,
+    Status CHAR(1),
+    ExamStartDate TIMESTAMP NOT NULL,
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-    create table studentquestions(	
-        Id int auto_increment,
-        QuestionId int,
-        StudentExamId int,
-        ExamId int,
-        Subject int,
-        Professor int,
-        Title varchar(20000),
-        Points int,
-        Created_at datetime,
-        primary key(Id)
-    );
+-- Student Questions Table
+CREATE TABLE studentquestions (
+    Id SERIAL PRIMARY KEY,
+    QuestionId INT REFERENCES questions(Id) ON DELETE CASCADE,
+    StudentExamId INT REFERENCES studentexam(Id) ON DELETE CASCADE,
+    ExamId INT REFERENCES exam(Id) ON DELETE CASCADE,
+    Subject INT REFERENCES subject(Id) ON DELETE CASCADE,
+    Professor INT REFERENCES users(Id) ON DELETE CASCADE,
+    Title TEXT NOT NULL,
+    Points INT NOT NULL,
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-    create table studentanswers(
-        Id int auto_increment,
-        StudentQuestionId int,
-        QuestionId int,
-        AnswerId int,
-        Professor int,
-        Title varchar(20000),
-        Status char(1),
-        SelectedAnswer char(1),
-        Created_at datetime,
-        primary key(Id)
-    );
+-- Student Answers Table
+CREATE TABLE studentanswers (
+    Id SERIAL PRIMARY KEY,
+    StudentQuestionId INT REFERENCES studentquestions(Id) ON DELETE CASCADE,
+    QuestionId INT REFERENCES questions(Id) ON DELETE CASCADE,
+    AnswerId INT REFERENCES answers(Id) ON DELETE CASCADE,
+    Professor INT REFERENCES users(Id) ON DELETE CASCADE,
+    Title TEXT NOT NULL,
+    Status CHAR(1),
+    SelectedAnswer CHAR(1),
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-    create table faq(
-        Id int auto_increment,
-        FirstName varchar(50),
-        LastName varchar(50),
-        Email varchar(150),
-        UserId int,
-        Question varchar(20000),
-        Answer varchar(20000),
-        primary key(Id),
-        foreign key(UserId) references users(Id)
-    );
+-- FAQ Table
+CREATE TABLE faq (
+    Id SERIAL PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(150) NOT NULL,
+    UserId INT REFERENCES users(Id) ON DELETE CASCADE,
+    Question TEXT NOT NULL,
+    Answer TEXT
+);
